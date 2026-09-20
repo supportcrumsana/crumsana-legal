@@ -12,6 +12,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       padding: 40px 20px;
@@ -22,9 +26,10 @@
     }
 
     .container {
+      width: 100%;
       max-width: 900px;
       margin: 0 auto;
-      padding: 40px;
+      padding: 42px;
       background: #ffffff;
       border: 1px solid #dce8df;
       border-radius: 20px;
@@ -32,35 +37,41 @@
     }
 
     h1 {
-      margin-top: 0;
-      margin-bottom: 8px;
+      margin: 0 0 8px;
       color: #173c29;
       font-size: 34px;
       line-height: 1.2;
-    }
-
-    .subtitle {
-      color: #68796f;
-      margin-bottom: 25px;
-    }
-
-    .summary {
-      padding: 20px;
-      margin: 25px 0;
-      background: #edf7f0;
-      border-radius: 12px;
+      letter-spacing: -0.5px;
     }
 
     h2 {
-      margin-top: 32px;
-      margin-bottom: 12px;
+      margin: 38px 0 14px;
+      padding-bottom: 8px;
       color: #1d7044;
       font-size: 21px;
       line-height: 1.35;
+      border-bottom: 1px solid #e1ebe4;
+    }
+
+    h3 {
+      margin: 24px 0 10px;
+      color: #285b3d;
+      font-size: 17px;
+      line-height: 1.4;
     }
 
     p {
-      margin: 0 0 15px;
+      margin: 0 0 16px;
+    }
+
+    ul {
+      margin: 0 0 18px;
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 9px;
+      padding-left: 4px;
     }
 
     a {
@@ -68,39 +79,86 @@
       font-weight: bold;
     }
 
+    a:hover {
+      text-decoration: underline;
+    }
+
     .back {
       display: inline-block;
-      margin-bottom: 25px;
+      margin-bottom: 28px;
+      color: #1d7044;
+      font-size: 14px;
       text-decoration: none;
+    }
+
+    .subtitle {
+      margin-bottom: 28px;
+      color: #68796f;
+      font-size: 16px;
+    }
+
+    .summary {
+      margin: 28px 0;
+      padding: 22px 24px;
+      background: #edf7f0;
+      border: 1px solid #d8ebdd;
+      border-radius: 14px;
+    }
+
+    .summary-title {
+      display: block;
+      margin-bottom: 12px;
+      color: #173c29;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 0.3px;
     }
 
     .contact {
+      margin: 22px 0;
       padding: 18px 20px;
-      margin-top: 20px;
       background: #edf7f0;
+      border: 1px solid #d8ebdd;
       border-radius: 12px;
     }
 
+    .contact strong {
+      color: #173c29;
+    }
+
     .contact a {
-      text-decoration: none;
+      display: inline-block;
+      margin-top: 4px;
       word-break: break-word;
+      text-decoration: none;
+    }
+
+    .note {
+      margin: 20px 0;
+      padding: 16px 18px;
+      background: #f8faf8;
+      border-left: 4px solid #8bb79a;
+      border-radius: 6px;
+      color: #506257;
+      font-size: 14px;
     }
 
     .footer {
-      margin-top: 35px;
-      padding-top: 20px;
-      border-top: 1px solid #dce8df;
+      margin-top: 42px;
+      padding-top: 22px;
       color: #68796f;
       font-size: 14px;
+      text-align: center;
+      border-top: 1px solid #dce8df;
     }
 
     @media (max-width: 600px) {
       body {
-        padding: 20px 12px;
+        padding: 18px 10px;
       }
 
       .container {
-        padding: 24px 20px;
+        padding: 26px 20px;
         border-radius: 14px;
       }
 
@@ -109,7 +167,21 @@
       }
 
       h2 {
+        margin-top: 32px;
         font-size: 19px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      .summary,
+      .contact {
+        padding: 18px;
+      }
+
+      ul {
+        padding-left: 22px;
       }
     }
   </style>
@@ -138,37 +210,46 @@
     </div>
 
     <div class="summary">
-      <strong>IN SINTESI</strong>
+      <span class="summary-title">IN SINTESI</span>
 
       <p>
-        CRUMSANA ("App") è progettata secondo un principio di massimizzazione della privacy.
-        I dati contenuti negli estratti conto importati
-        vengono elaborati localmente sul dispositivo per fornire
-        le funzioni di analisi richieste.
-        Il Titolare non gestisce nessun tipo di archivio cloud/archivio
-        delle transazioni e CRUMSANA non richiede un account utente
-        per funzionare.
+        CRUMSANA ("App") è progettata secondo un principio di
+        minimizzazione del trattamento dei dati personali.
+        I dati contenuti negli estratti conto importati vengono
+        elaborati localmente sul dispositivo per fornire le
+        funzioni di analisi richieste dall'Utente.
+      </p>
+
+      <p>
+        Il Titolare non gestisce un archivio cloud delle transazioni
+        e CRUMSANA non richiede un account utente per funzionare.
+      </p>
+
+      <p>
+        Eventuali trattamenti effettuati autonomamente dal sistema
+        operativo, dagli store o da servizi di terze parti sono
+        soggetti alle informative dei rispettivi soggetti.
       </p>
     </div>
 
-    <h2>1. Informazioni sul titolare e sull'applicazione</h2>
+    <h2>1. Informazioni sul Titolare e sull'applicazione</h2>
 
     <p>
       <strong>CRUMSANA</strong> è un'applicazione sviluppata da
-      <strong>Lorenzo Guidi</strong>, uno sviluppatore indipendente
-      residente in Italia ("Titolare").
+      <strong>Lorenzo Guidi</strong>, sviluppatore indipendente
+      residente in Italia, di seguito denominato "Titolare".
     </p>
 
     <p>
-      CRUMSANA è progettata per consentire agli utenti di importare
+      CRUMSANA è progettata per consentire agli Utenti di importare
       e analizzare i propri dati finanziari attraverso file CSV
       o Excel, direttamente sul proprio dispositivo.
     </p>
 
     <p>
       Per domande relative alla privacy, al trattamento dei dati
-      personali o all'utilizzo dell'applicazione, puoi contattarmi
-      al seguente indirizzo email:
+      personali o all'utilizzo dell'applicazione, è possibile
+      contattare il Titolare al seguente indirizzo email:
     </p>
 
     <div class="contact">
@@ -184,27 +265,43 @@
     <p>
       Quando l'Utente seleziona un file CSV o Excel, il documento
       può contenere informazioni relative a operazioni finanziarie
-      e altri dati personali, come nomi e cognomi, IBAN, numeri
-      di conto, descrizioni delle operazioni e ulteriori
-      informazioni eventualmente presenti nel file.
+      e altri dati personali.
     </p>
+
+    <p>
+      A seconda del contenuto del file, tali informazioni possono
+      includere:
+    </p>
+
+    <ul>
+      <li>nome e cognome;</li>
+      <li>IBAN;</li>
+      <li>numero di conto;</li>
+      <li>descrizione delle operazioni;</li>
+      <li>data dell'operazione;</li>
+      <li>eventuale data valuta;</li>
+      <li>importo;</li>
+      <li>tipologia dell'operazione;</li>
+      <li>saldo;</li>
+      <li>ulteriori informazioni presenti nel documento.</li>
+    </ul>
 
     <p>
       CRUMSANA può leggere ed elaborare localmente sul dispositivo
       dell'Utente le informazioni contenute nel file che sono
       necessarie per l'importazione, la mappatura e il funzionamento
-      delle analisi proposte dall'App. Le colonne che l'Utente
-      può selezionare per l'importazione e l'analisi includono:
-      (data dell'operazione, eventuale data valuta, importo,
-      descrizione, tipologia dell'operazione e saldo).
-      Tali informazioni possono costituire dati personali o dati
-      finanziari riferibili all'Utente o ad altre persone
-      eventualmente indicate nel documento.
+      delle analisi proposte dall'App.
+    </p>
+
+    <p>
+      Le colonne disponibili per l'importazione e l'analisi
+      dipendono dalle funzionalità effettivamente implementate
+      nell'App e dalla configurazione effettuata dall'Utente.
     </p>
 
     <p>
       I dati utilizzati per le analisi dipendono dalle colonne
-      selezionate e dalla configurazione effettuata dall'Utente.
+      selezionate dall'Utente.
       Le informazioni non necessarie alle analisi, come eventuali
       IBAN o nominativi non selezionati, non vengono utilizzate
       per i calcoli, i riepiloghi, i grafici o le previsioni
@@ -213,267 +310,507 @@
     </p>
 
     <p>
+      Le informazioni contenute nei file possono costituire dati
+      personali o dati finanziari riferibili all'Utente o ad altre
+      persone eventualmente indicate nel documento.
+    </p>
+
+    <p>
       L'elaborazione dei dati avviene localmente sul dispositivo
-      dell'Utente. I dati contenuti nei file importati non vengono
-      trasmessi al Titolare per essere archiviati o analizzati
-      tramite server remoti, secondo il normale funzionamento
-      dell'App.
+      dell'Utente. Secondo il normale funzionamento dell'App,
+      i dati contenuti nei file importati non vengono trasmessi
+      al Titolare per essere archiviati o analizzati tramite
+      server remoti.
     </p>
 
     <h2>3. Impostazioni dell'app</h2>
 
     <p>
-      CRUMSANA può memorizzare localmente alcune preferenze,
-      come lingua, valuta e configurazioni necessarie
-      al funzionamento e alla personalizzazione. Tali preferenze
-      non costituiscono un archivio delle transazioni importate.
+      CRUMSANA può memorizzare localmente alcune preferenze
+      dell'applicazione, come la lingua, la valuta e le
+      configurazioni necessarie al funzionamento e alla
+      personalizzazione.
+    </p>
+
+    <p>
+      Tali preferenze non costituiscono un archivio delle
+      transazioni importate.
     </p>
 
     <p>
       Al primo avvio, CRUMSANA può utilizzare le impostazioni
       locali del dispositivo, come la lingua e le impostazioni
       regionali, per determinare automaticamente la lingua
-      dell'interfaccia e proporre o impostare la valuta predefinita
-      dell'App. Queste informazioni vengono utilizzate
-      esclusivamente per configurare il funzionamento iniziale
-      dell'applicazione e non vengono trasmesse, secondo il normale funzionamento dell'App,
-       a soggetti terzi o al Titolare. La lingua e la valuta possono essere memorizzate per gli avvii successivi.
+      dell'interfaccia e proporre o impostare la valuta
+      predefinita dell'App.
+    </p>
+
+    <p>
+      L'Utente può modificare la lingua e la valuta direttamente
+      nelle impostazioni dell'applicazione.
+      Le preferenze eventualmente selezionate manualmente possono
+      essere salvate localmente sul dispositivo e utilizzate
+      nei successivi avvii dell'App.
+    </p>
+
+    <p>
+      Le impostazioni relative alla lingua e alla valuta vengono
+      utilizzate per configurare e personalizzare il funzionamento
+      dell'applicazione.
+    </p>
+
+    <p>
+      Secondo il normale funzionamento dell'App, tali impostazioni
+      non risultano trasmesse da CRUMSANA al Titolare o a soggetti
+      terzi tramite specifici servizi di rete integrati
+      nell'applicazione.
     </p>
 
     <h2>4. Modalità di trattamento</h2>
 
     <p>
       Il trattamento dei dati finanziari importati avviene
-      localmente sul dispositivo dell'Utente. CRUMSANA non
-      richiede un account online e non dispone di un database
-      cloud o altre tipologie di database destinati
-      all'archiviazione delle transazioni. L'elaborazione
-      comprende la lettura dei dati, l'eventuale normalizzazione
-      degli importi, l'associazione delle colonne e i calcoli
-      necessari alle funzioni proposte dall'App.
+      localmente sul dispositivo dell'Utente.
+    </p>
+
+    <p>
+      CRUMSANA:
+    </p>
+
+    <ul>
+      <li>non richiede un account online;</li>
+      <li>non dispone di un database cloud destinato all'archiviazione delle transazioni;</li>
+      <li>non necessita, secondo il normale funzionamento dell'App, di trasmettere i dati finanziari a server del Titolare;</li>
+      <li>elabora i dati selezionati per fornire le funzionalità richieste dall'Utente.</li>
+    </ul>
+
+    <p>
+      L'elaborazione può comprendere la lettura dei dati,
+      l'eventuale normalizzazione degli importi, l'associazione
+      delle colonne e i calcoli necessari alle funzioni
+      di analisi e visualizzazione proposte dall'App.
     </p>
 
     <h2>5. Trasmissione dei dati finanziari</h2>
 
     <p>
-      I dati contenuti negli estratti conto non vengono trasmessi
-      dal normale funzionamento di CRUMSANA a server gestiti
-      dal Titolare per essere archiviati o analizzati.
-      CRUMSANA non utilizza i dati finanziari importati per
-      addestrare sistemi di intelligenza artificiale e non
-      dispone di un servizio cloud per la conservazione
-      delle transazioni.
+      Secondo il normale funzionamento di CRUMSANA, i dati
+      contenuti negli estratti conto non vengono trasmessi
+      a server gestiti dal Titolare per essere archiviati
+      o analizzati.
     </p>
+
+    <p>
+      CRUMSANA non utilizza i dati finanziari importati per
+      addestrare sistemi di intelligenza artificiale.
+    </p>
+
+    <p>
+      L'App non dispone di un servizio cloud destinato alla
+      conservazione delle transazioni importate.
+    </p>
+
+    <div class="note">
+      La presente descrizione riguarda il normale funzionamento
+      dell'App e deve essere aggiornata qualora vengano introdotti
+      servizi esterni o funzionalità che comportino una trasmissione
+      dei dati.
+    </div>
 
     <h2>6. Servizi di analytics, pubblicità e profilazione</h2>
 
     <p>
       CRUMSANA non integra, per il trattamento dei dati finanziari,
-      servizi di analytics, pubblicità o profilazione destinati
-      a raccogliere o utilizzare i movimenti/dati dell'Utente.
-      Il Titolare non vende, non affitta e non utilizza
-      i dati finanziari importati per finalità di marketing.
+      specifici servizi propri di analytics, pubblicità o
+      profilazione destinati a raccogliere o utilizzare i
+      movimenti o i dati finanziari dell'Utente.
+    </p>
+
+    <p>
+      Il Titolare:
+    </p>
+
+    <ul>
+      <li>non vende i dati finanziari importati;</li>
+      <li>non affitta i dati finanziari importati;</li>
+      <li>non utilizza i dati finanziari importati per finalità di marketing.</li>
+    </ul>
+
+    <p>
+      Eventuali servizi di terze parti eventualmente integrati
+      in futuro saranno valutati e descritti nella presente
+      informativa, ove necessario.
     </p>
 
     <h2>7. Conservazione dei dati finanziari</h2>
 
     <p>
       Le transazioni importate non vengono salvate in un database
-      dell'App, o in qualsiasi altro database, come archivio
-      storico. La loro permanenza in memoria locale è collegata
+      dell'App o in un altro database gestito dal Titolare come
+      archivio storico.
+    </p>
+
+    <p>
+      La permanenza dei dati nella memoria locale è collegata
       all'utilizzo dell'App e alle operazioni richieste
-      dall'Utente. CRUMSANA non recupera le transazioni
-      da un archivio cloud/archivio al successivo avvio.
-      Se non diversamente indicato in questo documento, i Dati Personali sono 
-      trattati e conservati per il tempo richiesto dalla finalità per la quale
-      sono stati raccolti e potrebbero essere conservati per un periodo più lungo
-      a causa di eventuali obbligazioni legali o sulla base del consenso degli Utenti.
+      dall'Utente.
+    </p>
+
+    <p>
+      CRUMSANA non recupera le transazioni da un archivio cloud
+      al successivo avvio.
+    </p>
+
+    <p>
+      Eventuali dati personali conservati dal Titolare per
+      adempiere a obblighi di legge o per esercitare o difendere
+      un diritto saranno trattati e conservati per il periodo
+      necessario allo specifico scopo e secondo la normativa
+      applicabile.
     </p>
 
     <h2>8. Conservazione temporanea e visibilità dei dati</h2>
 
     <p>
       I dati importati vengono elaborati temporaneamente all'interno
-      dell'App per consentire l'analisi delle operazioni
-      finanziarie e la visualizzazione dei risultati.
+      dell'App per consentire l'analisi delle operazioni finanziarie
+      e la visualizzazione dei risultati.
     </p>
 
     <p>
       Durante l'utilizzo dell'App, i dati elaborati possono rimanere
-      visibili mentre l'utente naviga tra le diverse schermate di
-      CRUMSANA o passa temporaneamente ad altre applicazioni,
-      lasciando CRUMSANA in background. In questi casi, alcune
-      informazioni potrebbero essere ancora visualizzate quando
-      l'utente torna all'App o nell'anteprima delle applicazioni
-      recenti del dispositivo.
+      visibili mentre l'Utente naviga tra le diverse schermate
+      di CRUMSANA o passa temporaneamente ad altre applicazioni,
+      lasciando CRUMSANA in background.
     </p>
 
     <p>
-      Questa permanenza temporanea non implica necessariamente un
-      salvataggio permanente dei dati. Eventuali copie temporanee o
-      cache gestite dal sistema operativo o da componenti esterni
-      dipendono dal relativo funzionamento del dispositivo e non
-      sono sotto il controllo diretto del Titolare. CRUMSANA non
-      modifica il file originale durante l'importazione.
-    </p>
-
-    <h2>9. Base giuridica</h2>
-
-    <p>
-     Gli Utenti possono esercitare determinati diritti con riferimento ai Dati trattati dal Titolare.
-
-In particolare, nei limiti previsti dalla legge, l’Utente ha il diritto di:
-
-revocare il consenso in ogni momento. L’Utente può revocare il consenso al trattamento dei propri Dati Personali precedentemente espresso.
-opporsi al trattamento dei propri Dati. L’Utente può opporsi al trattamento dei propri Dati quando esso avviene in virtù di una base giuridica diversa dal consenso.
-accedere ai propri Dati. L’Utente ha diritto ad ottenere informazioni sui Dati trattati dal Titolare, su determinati aspetti del trattamento ed a ricevere una copia dei Dati trattati.
-verificare e chiedere la rettificazione. L’Utente può verificare la correttezza dei propri Dati e richiederne l’aggiornamento o la correzione.
-ottenere la limitazione del trattamento. L’Utente può richiedere la limitazione del trattamento dei propri Dati. In tal caso il Titolare non tratterà i Dati per alcun altro scopo se non la loro conservazione.
-ottenere la cancellazione o rimozione dei propri Dati Personali. L’Utente può richiedere la cancellazione dei propri Dati da parte del Titolare.
-ricevere i propri Dati o farli trasferire ad altro titolare. L’Utente ha diritto di ricevere i propri Dati in formato strutturato, di uso comune e leggibile da dispositivo automatico e, ove tecnicamente fattibile, di ottenerne il trasferimento senza ostacoli ad un altro titolare.
-proporre reclamo. L’Utente può proporre un reclamo all’autorità di controllo della protezione dei dati personali competente o agire in sede giudiziale.
-Gli Utenti hanno diritto di ottenere informazioni in merito alla base giuridica per il trasferimento di Dati all'estero incluso verso qualsiasi organizzazione internazionale regolata dal diritto internazionale o costituita da due o più paesi, come ad esempio l’ONU, nonché in merito alle misure di sicurezza adottate dal Titolare per proteggere i loro Dati.
-Quando i Dati Personali sono trattati nell’interesse pubblico, nell’esercizio di pubblici poteri di cui è investito il Titolare oppure per perseguire un interesse legittimo del Titolare, gli Utenti hanno diritto ad opporsi al trattamento per motivi connessi alla loro situazione particolare.
-    </p>
-
-    <h2>10. Sicurezza</h2>
-
-    <p>
-      CRUMSANA è progettata per elaborare localmente sul
-      dispositivo dell’Utente i dati importati, senza richiedere
-      la trasmissione dei dati finanziari a sistemi remoti
-      gestiti dal Titolare. Questa architettura riduce
-      la necessità di trasferire tali dati al Titolare,
-      ma non costituisce una garanzia assoluta di sicurezza.
+      In questi casi, alcune informazioni potrebbero essere ancora
+      visualizzate quando l'Utente torna all'App o nell'anteprima
+      delle applicazioni recenti del dispositivo.
     </p>
 
     <p>
-      La sicurezza dei dati presenti sul dispositivo dipende
-      anche dalle misure di sicurezza del dispositivo stesso,
-      dal sistema operativo, dai servizi e componenti di terze
-      parti e dalle modalità con cui l’Utente gestisce i propri
-      file e il proprio dispositivo. CRUMSANA viene fornita
-      nello stato in cui è resa disponibile e il Titolare
-      non garantisce l'assenza di vulnerabilità, errori
-      o altri rischi di sicurezza.
+      Questa permanenza temporanea non implica necessariamente
+      un salvataggio permanente dei dati.
     </p>
 
-    <h2>11. Comunicazione a terzi</h2>
+    <p>
+      Eventuali copie temporanee o cache gestite dal sistema
+      operativo o da componenti esterni dipendono dal relativo
+      funzionamento del dispositivo e non sono sotto il controllo
+      diretto del Titolare.
+    </p>
+
+    <p>
+      CRUMSANA non modifica il file originale durante l'importazione.
+    </p>
+
+    <h2>9. Base giuridica del trattamento</h2>
+
+    <p>
+      Il Titolare tratta i dati personali dell'Utente, ove
+      applicabile, sulla base di una o più condizioni previste
+      dalla normativa vigente in materia di protezione dei dati
+      personali, incluso il Regolamento (UE) 2016/679 ("GDPR").
+    </p>
+
+    <p>
+      Il trattamento può essere fondato su una delle seguenti
+      basi giuridiche, quando applicabile:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Consenso dell'Utente:</strong>
+        l'Utente ha prestato il consenso per una o più finalità
+        specifiche.
+      </li>
+
+      <li>
+        <strong>Esecuzione di un contratto:</strong>
+        il trattamento è necessario all'esecuzione di un contratto
+        con l'Utente o all'esecuzione di misure precontrattuali
+        adottate su richiesta dell'Utente.
+      </li>
+
+      <li>
+        <strong>Obbligo legale:</strong>
+        il trattamento è necessario per adempiere un obbligo legale
+        al quale è soggetto il Titolare.
+      </li>
+
+      <li>
+        <strong>Interesse pubblico o pubblici poteri:</strong>
+        il trattamento è necessario per l'esecuzione di un compito
+        di interesse pubblico o per l'esercizio di pubblici poteri
+        di cui è investito il Titolare, ove applicabile.
+      </li>
+
+      <li>
+        <strong>Legittimo interesse:</strong>
+        il trattamento è necessario per il perseguimento del
+        legittimo interesse del Titolare o di terzi, purché non
+        prevalgano gli interessi o i diritti e le libertà fondamentali
+        dell'Utente che richiedono la protezione dei dati personali.
+      </li>
+    </ul>
+
+    <p>
+      In relazione alle funzionalità principali di CRUMSANA,
+      il trattamento locale dei dati contenuti nei file selezionati
+      dall'Utente è effettuato nella misura necessaria a fornire
+      le funzioni di importazione, elaborazione, analisi e
+      visualizzazione richieste dall'Utente.
+    </p>
+
+    <p>
+      La base giuridica concreta deve essere valutata in relazione
+      a ciascun trattamento effettivamente effettuato e alle
+      circostanze specifiche del rapporto con l'Utente.
+    </p>
+
+    <p>
+      È possibile richiedere al Titolare di chiarire la concreta
+      base giuridica applicata a ciascun trattamento e, in
+      particolare, di specificare se il trattamento sia basato
+      sulla legge, previsto da un contratto, necessario per
+      concludere un contratto, fondato sul consenso o basato
+      su un legittimo interesse.
+    </p>
+
+    <h2>10. Difesa in giudizio e adempimento degli obblighi di legge</h2>
+
+    <p>
+      I dati personali dell'Utente possono essere utilizzati
+      dal Titolare, nei limiti consentiti dalla normativa
+      applicabile, per esercitare o difendere un diritto in
+      sede giudiziaria o nelle fasi preparatorie alla sua
+      eventuale instaurazione.
+    </p>
+
+    <p>
+      Tale trattamento può riguardare, tra l'altro:
+    </p>
+
+    <ul>
+      <li>la prevenzione e la gestione di abusi nell'utilizzo dell'Applicazione;</li>
+      <li>la tutela dei diritti e degli interessi legittimi del Titolare;</li>
+      <li>la gestione di contestazioni o controversie;</li>
+      <li>l'esercizio o la difesa di diritti in sede giudiziaria.</li>
+    </ul>
+
+    <p>
+      Il Titolare può inoltre essere tenuto a comunicare dati
+      personali quando ciò sia richiesto da un obbligo di legge,
+      da un provvedimento dell'autorità giudiziaria o da una
+      richiesta legittima di un'autorità pubblica competente.
+    </p>
+
+    <p>
+      Eventuali comunicazioni saranno effettuate nei limiti
+      previsti dalla normativa applicabile e per le finalità
+      che ne giustificano la necessità.
+    </p>
+
+    <h2>11. Log di sistema e manutenzione</h2>
+
+    <p>
+      Sulla base dell'architettura attuale dell'App, CRUMSANA
+      non integra specifici servizi propri destinati alla
+      raccolta, alla trasmissione o all'analisi remota dei
+      log di sistema contenenti i dati finanziari importati
+      dall'Utente.
+    </p>
+
+    <p>
+      Il sistema operativo del dispositivo, gli strumenti di
+      sviluppo, gli store e gli eventuali componenti o servizi
+      di terze parti possono tuttavia generare autonomamente
+      registrazioni tecniche, log di sistema o informazioni
+      diagnostiche relative al funzionamento dell'App e del
+      dispositivo.
+    </p>
+
+    <p>
+      A seconda del dispositivo, del sistema operativo e dei
+      servizi eventualmente utilizzati, tali registrazioni
+      potrebbero contenere informazioni tecniche o dati personali,
+      quali:
+    </p>
+
+    <ul>
+      <li>informazioni relative agli errori;</li>
+      <li>informazioni sul dispositivo;</li>
+      <li>versione del sistema operativo;</li>
+      <li>data e ora dell'evento;</li>
+      <li>informazioni tecniche relative al funzionamento dell'App;</li>
+      <li>indirizzo IP, ove previsto dai relativi servizi.</li>
+    </ul>
+
+    <p>
+      L'eventuale raccolta, conservazione o trasmissione di tali
+      informazioni da parte del sistema operativo, degli store
+      o di servizi di terze parti è disciplinata dalle informative
+      privacy dei rispettivi soggetti.
+    </p>
+
+    <p>
+      Tali trattamenti non sono necessariamente sotto il controllo
+      diretto del Titolare e possono dipendere dalle configurazioni
+      del dispositivo, dal sistema operativo e dai servizi
+      utilizzati dall'Utente.
+    </p>
+
+    <p>
+      Qualora in futuro CRUMSANA integri propri strumenti di log,
+      diagnostica, analytics o servizi di crash reporting che
+      comportino un ulteriore trattamento di dati personali,
+      la presente Privacy Policy sarà aggiornata, ove necessario,
+      prima dell'introduzione delle relative funzionalità.
+    </p>
+
+    <h2>12. Sicurezza</h2>
+
+    <p>
+      CRUMSANA è progettata per elaborare localmente sul dispositivo
+      dell'Utente i dati importati, senza richiedere la trasmissione
+      dei dati finanziari a sistemi remoti gestiti dal Titolare.
+    </p>
+
+    <p>
+      Questa architettura riduce la necessità di trasferire i
+      dati finanziari al Titolare, ma non costituisce una garanzia
+      assoluta di sicurezza.
+    </p>
+
+    <p>
+      La sicurezza dei dati presenti sul dispositivo dipende anche:
+    </p>
+
+    <ul>
+      <li>dalle misure di sicurezza del dispositivo;</li>
+      <li>dal sistema operativo utilizzato;</li>
+      <li>dai servizi e dai componenti di terze parti;</li>
+      <li>dalle modalità con cui l'Utente gestisce i propri file;</li>
+      <li>dalle modalità con cui l'Utente protegge il proprio dispositivo.</li>
+    </ul>
+
+    <p>
+      CRUMSANA viene fornita nello stato in cui è resa disponibile.
+      Nei limiti consentiti dalla legge, il Titolare non garantisce
+      l'assenza di vulnerabilità, errori o altri rischi di sicurezza.
+    </p>
+
+    <h2>13. Comunicazione a terzi</h2>
 
     <p>
       Il Titolare non comunica i dati finanziari importati
       a servizi cloud, piattaforme pubblicitarie o strumenti
-      di analytics per svolgere le funzioni di analisi.
-      Eventuali comunicazioni potranno avvenire quando
-      necessarie per adempiere a obblighi di legge,
-      tutelare diritti del Titolare o dell'Utente
-      o nei casi previsti dalla normativa.
+      di analytics per svolgere le funzioni di analisi
+      dell'Applicazione.
     </p>
 
-    <h2>12. Trasferimenti internazionali</h2>
+    <p>
+      Eventuali comunicazioni di dati personali potranno avvenire
+      quando necessarie per:
+    </p>
+
+    <ul>
+      <li>adempiere a obblighi di legge;</li>
+      <li>ottemperare a provvedimenti dell'autorità competente;</li>
+      <li>tutelare i diritti del Titolare o dell'Utente;</li>
+      <li>prevenire o gestire abusi;</li>
+      <li>esercitare o difendere un diritto in sede giudiziaria;</li>
+      <li>altri casi previsti dalla normativa applicabile.</li>
+    </ul>
+
+    <h2>14. Trasferimenti internazionali</h2>
 
     <p>
       Il Titolare non pianifica il trasferimento dei dati
       finanziari importati verso propri server situati
-      in Paesi terzi. Qualora in futuro venissero introdotti
-      servizi che comportino trasferimenti internazionali
-      di dati personali, la presente informativa sarà aggiornata
-      e saranno adottate le garanzie previste dalla normativa.
+      in Paesi terzi.
     </p>
 
-    <h2>13. Diritti dell'Utente</h2>
+    <p>
+      Qualora in futuro venissero introdotti servizi che comportino
+      trasferimenti internazionali di dati personali, la presente
+      informativa sarà aggiornata e saranno adottate, ove richieste,
+      le garanzie previste dalla normativa applicabile.
+    </p>
+
+    <p>
+      Gli eventuali trasferimenti effettuati autonomamente da
+      sistemi operativi, store o servizi di terze parti sono
+      disciplinati dalle informative e dalle condizioni dei
+      rispettivi soggetti.
+    </p>
+
+    <h2>15. Diritti dell'Utente</h2>
 
     <p>
       Nei limiti e alle condizioni previste dalla normativa
       applicabile, l'Utente può esercitare i diritti previsti
-      dal GDPR, tra cui accesso, rettifica, cancellazione,
-      limitazione del trattamento, opposizione, portabilità
-      dei dati, revoca del consenso quando applicabile
-      e proposizione di un reclamo all'autorità di controllo
-      competente.
+      dal GDPR, tra cui:
     </p>
 
-    <h2>14. Come esercitare i diritti</h2>
+    <ul>
+      <li>
+        <strong>Accesso:</strong>
+        ottenere conferma dell'esistenza o meno di dati personali
+        che lo riguardano e accedere a tali dati.
+      </li>
+
+      <li>
+        <strong>Rettifica:</strong>
+        richiedere la correzione dei dati personali inesatti
+        o l'integrazione di quelli incompleti.
+      </li>
+
+      <li>
+        <strong>Cancellazione:</strong>
+        richiedere la cancellazione dei dati personali nei casi
+        previsti dalla normativa.
+      </li>
+
+      <li>
+        <strong>Limitazione:</strong>
+        richiedere la limitazione del trattamento nei casi
+        previsti dalla normativa.
+      </li>
+
+      <li>
+        <strong>Opposizione:</strong>
+        opporsi al trattamento nei casi previsti dalla normativa.
+      </li>
+
+      <li>
+        <strong>Portabilità:</strong>
+        ricevere i dati personali in un formato strutturato,
+        di uso comune e leggibile da dispositivo automatico,
+        quando applicabile.
+      </li>
+
+      <li>
+        <strong>Revoca del consenso:</strong>
+        revocare il consenso precedentemente prestato quando
+        il trattamento si basa sul consenso, senza pregiudicare
+        la liceità del trattamento effettuato prima della revoca.
+      </li>
+
+      <li>
+        <strong>Reclamo:</strong>
+        proporre un reclamo all'autorità di controllo competente.
+      </li>
+    </ul>
+
+    <h2>16. Come esercitare i diritti</h2>
 
     <p>
-      Le richieste possono essere inviate all'indirizzo email
-      privacy indicato nella presente informativa.
-      Il Titolare risponderà entro i termini previsti
-      dalla normativa applicabile e potrà richiedere
-      le informazioni ragionevolmente necessarie per
-      verificare l'identità del richiedente.
-    </p>
-
-    <h2>15. Responsabilità dell'Utente sui file importati</h2>
-
-    <p>
-      L'Utente è responsabile della sicurezza dei file che sceglie di importare
-      e deve assicurarsi di avere il diritto di utilizzarli
-      con CRUMSANA. L'Utente deve evitare di importare
-      dati di terzi quando non dispone di una base giuridica
-      o di un'autorizzazione per farlo.
-    </p>
-
-    <h2>16. Accuratezza delle elaborazioni</h2>
-
-    <p>
-      CRUMSANA fornisce strumenti di analisi e visualizzazione
-      sulla base dei dati importati e delle associazioni
-      effettuate dall'Utente. I risultati possono dipendere
-      dalla qualità, completezza, formato e corretta mappatura
-      del file di origine. L'Utente deve sempre verificare i dati
-      importati e i risultati proposti dall'App.
-    </p>
-
-    <h2>17. Nessuna consulenza finanziaria</h2>
-
-    <p>
-      Le analisi, gli indicatori e le previsioni visualizzati
-      da CRUMSANA hanno solo finalità informative.
-      Non costituiscono consulenza finanziaria, fiscale,
-      contabile, bancaria o di investimento.
-    </p>
-
-    <h2>18. Minori</h2>
-
-    <p>
-      CRUMSANA è destinata esclusivamente a persone che abbiano
-      compiuto 18 anni. I minori di 18 anni non sono autorizzati
-      a utilizzare l’App né a importare dati
-      attraverso di essa.
-    </p>
-
-    <h2>19. Modifiche alla Privacy Policy</h2>
-
-    <p>
-      Il Titolare può aggiornare questa Privacy Policy
-      per riflettere modifiche normative, tecniche o funzionali
-      dell'App. La versione aggiornata sarà pubblicata
-      nella stessa pagina e recherà la relativa data
-      di aggiornamento. Quando richiesto dalla legge,
-      saranno adottate ulteriori modalità di informazione
-      o raccolta del consenso.
-    </p>
-
-    <h2>20. Componenti e servizi di terze parti</h2>
-
-    <p>
-      CRUMSANA può utilizzare componenti software necessari
-      al funzionamento dell'applicazione, in particolare
-      per la selezione e lettura dei file, la gestione
-      delle preferenze locali, l'elaborazione dei dati
-      e la visualizzazione dei grafici. L'uso di tali
-      componenti non implica di per sé che i dati finanziari
-      vengano trasmessi a soggetti terzi. Eventuali servizi
-      esterni introdotti in futuro saranno valutati e,
-      quando necessario, indicati nella presente informativa.
-    </p>
-
-    <h2>21. Contatti</h2>
-
-    <p>
-      Per qualsiasi richiesta relativa alla presente
-      Privacy Policy o al trattamento dei dati personali:
+      Le richieste relative all'esercizio dei diritti possono
+      essere inviate all'indirizzo email indicato nella presente
+      informativa:
     </p>
 
     <div class="contact">
@@ -484,19 +821,186 @@ Quando i Dati Personali sono trattati nell’interesse pubblico, nell’esercizi
       </strong>
     </div>
 
-    <h2>22. Portata dell'informativa</h2>
+    <p>
+      Il Titolare risponderà entro i termini previsti dalla
+      normativa applicabile.
+    </p>
+
+    <p>
+      Il Titolare potrà richiedere le informazioni ragionevolmente
+      necessarie per verificare l'identità del richiedente e
+      prevenire la comunicazione di dati personali a soggetti
+      non autorizzati.
+    </p>
+
+    <h2>17. Responsabilità dell'Utente sui file importati</h2>
+
+    <p>
+      L'Utente è responsabile della sicurezza dei file che
+      sceglie di importare e deve assicurarsi di avere il
+      diritto di utilizzarli con CRUMSANA.
+    </p>
+
+    <p>
+      L'Utente deve evitare di importare dati di terzi quando
+      non dispone di una base giuridica, di un'autorizzazione
+      o di altro titolo legittimo per farlo.
+    </p>
+
+    <p>
+      L'Utente è inoltre responsabile della verifica del contenuto
+      dei file e della corretta selezione delle colonne da importare
+      e utilizzare nelle analisi.
+    </p>
+
+    <h2>18. Accuratezza delle elaborazioni</h2>
+
+    <p>
+      CRUMSANA fornisce strumenti di analisi e visualizzazione
+      sulla base dei dati importati e delle associazioni
+      effettuate dall'Utente.
+    </p>
+
+    <p>
+      I risultati possono dipendere:
+    </p>
+
+    <ul>
+      <li>dalla qualità del file di origine;</li>
+      <li>dalla completezza dei dati;</li>
+      <li>dal formato del documento;</li>
+      <li>dalla corretta mappatura delle colonne;</li>
+      <li>dalle impostazioni selezionate dall'Utente;</li>
+      <li>dalle funzionalità effettivamente implementate nell'App.</li>
+    </ul>
+
+    <p>
+      L'Utente deve sempre verificare i dati importati e i
+      risultati proposti dall'App prima di utilizzarli
+      per prendere decisioni.
+    </p>
+
+    <h2>19. Nessuna consulenza finanziaria</h2>
+
+    <p>
+      Le analisi, gli indicatori e le previsioni visualizzati
+      da CRUMSANA hanno esclusivamente finalità informative.
+    </p>
+
+    <p>
+      Le funzionalità dell'App non costituiscono consulenza:
+    </p>
+
+    <ul>
+      <li>finanziaria;</li>
+      <li>fiscale;</li>
+      <li>contabile;</li>
+      <li>bancaria;</li>
+      <li>di investimento.</li>
+    </ul>
+
+    <p>
+      L'Utente è responsabile delle decisioni assunte sulla base
+      delle informazioni visualizzate dall'Applicazione.
+    </p>
+
+    <h2>20. Minori</h2>
+
+    <p>
+      CRUMSANA è destinata esclusivamente a persone che abbiano
+      compiuto 18 anni.
+    </p>
+
+    <p>
+      I minori di 18 anni non sono autorizzati a utilizzare
+      l'App né a importare dati attraverso di essa.
+    </p>
+
+    <h2>21. Modifiche alla Privacy Policy</h2>
+
+    <p>
+      Il Titolare può aggiornare questa Privacy Policy per
+      riflettere modifiche normative, tecniche o funzionali
+      dell'App.
+    </p>
+
+    <p>
+      La versione aggiornata sarà pubblicata nella stessa pagina
+      e recherà, ove previsto, la relativa data di aggiornamento.
+    </p>
+
+    <p>
+      Quando richiesto dalla legge, saranno adottate ulteriori
+      modalità di informazione o raccolta del consenso.
+    </p>
+
+    <h2>22. Componenti e servizi di terze parti</h2>
+
+    <p>
+      CRUMSANA può utilizzare componenti software necessari
+      al funzionamento dell'applicazione, in particolare per:
+    </p>
+
+    <ul>
+      <li>la selezione e la lettura dei file;</li>
+      <li>la gestione delle preferenze locali;</li>
+      <li>l'elaborazione dei dati;</li>
+      <li>la visualizzazione dei grafici;</li>
+      <li>altre funzionalità tecniche dell'App.</li>
+    </ul>
+
+    <p>
+      L'uso di tali componenti non implica di per sé che i dati
+      finanziari vengano trasmessi a soggetti terzi.
+    </p>
+
+    <p>
+      Eventuali servizi esterni introdotti in futuro saranno
+      valutati e, quando necessario, indicati nella presente
+      informativa.
+    </p>
+
+    <p>
+      I componenti e i servizi di terze parti possono essere
+      soggetti alle rispettive condizioni d'uso e informative
+      sul trattamento dei dati personali.
+    </p>
+
+    <h2>23. Contatti</h2>
+
+    <p>
+      Per qualsiasi richiesta relativa alla presente Privacy Policy,
+      al trattamento dei dati personali o all'esercizio dei diritti,
+      è possibile contattare il Titolare al seguente indirizzo:
+    </p>
+
+    <div class="contact">
+      <strong>
+        <a href="mailto:support.crumsana@gmail.com">
+          support.crumsana@gmail.com
+        </a>
+      </strong>
+    </div>
+
+    <h2>24. Portata dell'informativa</h2>
 
     <p>
       La presente informativa descrive il trattamento effettuato
       da CRUMSANA sulla base dell'architettura e dei controlli
-      tecnici effettuati sul progetto. Non attribuisce al
-      Titolare trattamenti autonomamente effettuati dal sistema
-      operativo, dagli store o da servizi di terzi che non
-      siano sotto il suo controllo. Qualsiasi modifica
-      sostanziale al funzionamento dell'app o introduzione
-      di servizi esterni dovrà essere valutata anche sotto
-      il profilo privacy e, se necessario, riflessa nella
-      presente informativa.
+      tecnici effettuati sul progetto.
+    </p>
+
+    <p>
+      L'informativa non attribuisce al Titolare trattamenti
+      autonomamente effettuati dal sistema operativo, dagli store
+      o da servizi di terzi che non siano sotto il suo controllo.
+    </p>
+
+    <p>
+      Qualsiasi modifica sostanziale al funzionamento dell'App
+      o introduzione di servizi esterni dovrà essere valutata
+      anche sotto il profilo della privacy e, se necessario,
+      riflessa nella presente informativa.
     </p>
 
     <div class="footer">
